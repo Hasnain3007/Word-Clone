@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Clone</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #editor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        #formatting-options {
+            margin-top: 10px;
+        }
+
+        #formatting-options button {
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="editor" contenteditable="true">
+        Type your text here...
+    </div>
+
+    <div id="formatting-options">
+        <button onclick="textChange('bold')">Bold</button>
+        <button onclick="textChange('italic')">Italic</button>
+        <button onclick="textChange('underline')">Underline</button>
+    </div>
+
+</body>
+<script>
+    function textChange(style) {
+        document.execCommand(style, false, null);
+    }
+
+</script>
+
+</html>
